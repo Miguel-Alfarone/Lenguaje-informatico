@@ -1,0 +1,69 @@
+:root {
+    --color-letras: #ffffff;
+    --color-acento: #466c9eaa;
+    --color-acento2: #1dbdbdec;
+    --color-botones: #716dfcaa;
+    --fuente-titulos: 'Almendra Display', serif;
+    --fuente-texto: "Figtree", sans-serif;
+    --fondo-superior: #040404;
+    --fondo-completo: #000F1B;
+    --fondo-inferior: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fondo-completo);
+    color: var(--color-letras);
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #7f7fe7;
+}
+h2 ,h3 , p {
+    font-family: var(--fuente-texto);
+    letter-spacing: 1px;
+}
+
+strong {
+    color: var(--color-acento);
+}
+
+em {
+    color: var(--color-acento2);
+}
+
+header {
+    background-color: var(--fondo-superior);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.contenedor-links {
+    text-align: left;
+}
+
+main {
+    text-align: center;
+
+}
+
+footer {
+    background-color: var(--fondo-inferior);
+}
+
+.contenedor {
+    
+
+}
