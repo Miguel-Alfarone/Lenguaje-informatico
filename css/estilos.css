@@ -1,4 +1,8 @@
+/* ==========================================
+   1. VARIABLES Y CONFIGURACIÓN DE TEMA
+   ================================---------- */
 :root {
+    /* variables y colores por defecto de mi modo oscuro ya que la pagina la hice con tonalidad oscura*/
     --color-letras: #ffffff;
     --color-acento: #466c9eaa;
     --color-acento2: #1dbdbdec;
@@ -8,29 +12,168 @@
     --fondo-superior: #040404;
     --fondo-completo: #000F1B;
     --fondo-inferior: #000000;
+    --card-bg: #000000;
+    --hover-color: #222222;
 }
 
-* {
+/* variables del modo claro*/
+body.light-mode {
+    --color-letras: #1a1a1a;
+    --color-acento: #2c4a6eee;
+    --color-acento2: #0e7490;
+    --color-botones: #524ebfcc;
+    --fondo-superior: #f0f2f5;
+    --fondo-completo: #f8fafc;
+    --fondo-inferior: #ffffff;
+    --card-bg: #ffffff;
+    --hover-color: #e2e8f0;
+}
+
+/* RESET Y CONFIGURACIÓN BASE */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Evita desbordamiento horizontal */
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--fondo-completo);
     color: var(--color-letras);
-    font-size: 16px;
-    line-height: 1.6;
-    width: 100%;
-    margin:0;
-    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* HEADER Y NAVEGACIÓN */
+header {
+    max-width: 100%;
+    background-color: var(--fondo-superior);
+    margin: 0;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Bootstrap - navegación */
+.navbar-nav .nav-item .nav-link {
+    display: flex;
+    justify-content: end;
+    padding: 3px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--color-letras);
+    opacity: 0.8;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    font-size: 15px;
+}
+
+/* Navegación con cambio de color pasando mouse por encima */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: var(--hover-color);
+    opacity: 1;
+}
+
+.navbar-toggler {
+    border-color: var(--color-letras);
+    background-color: transparent;
+    padding: 6px 10px;
+}
+
+/* Bootstrap al abrir menú hamburguesa */
+#navbarDrawer.show .nav-link {
+    border-radius: 0;
+    padding: 10px;
+}
+
+/*  CONTENEDORES Y TARJETAS */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Contenedor con grid fluido y degradados */
+.seccion-fondo {
+    background-image: 
+        linear-gradient(to bottom, var(--fondo-completo) 0%, rgba(0, 15, 27, 0) 20%),
+        linear-gradient(to top, var(--fondo-completo) 0%, rgba(0, 15, 27, 0) 3%),
+        url(https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/bully/baa6328f05fee6f9062c65bc1f4e6ab8bffc494d.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
+}
+
+/* Formato general para las cartas */
+.card {
+    border: var(--color-acento) solid 2px;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    color: var(--color-letras);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Formato de títulos para cartas */
+.card-title {
+    font-family: var(--fuente-texto);
+    font-size: 30px;
+    color: var(--color-letras);
+}
+
+/* Formato de los cuerpos de las cartas */
+.card-body {
+    color: var(--color-letras);
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 5px;
+}
+
+.btn-card {
+    text-decoration: none;
+    color: var(--color-letras);
+    border: var(--color-letras) solid 1px;
+    background-color: transparent;
+    display: inline-block;
+    padding: 6px;
+    width: fit-content;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--hover-color);
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    background-color: var(--fondo-inferior);
+    color: var(--color-letras);
+    transition: background-color 0.3s ease;
+}
+
+/* TIPOGRAFÍA Y TEXTOS */
 h1 {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #7f7fe7;
 }
-h2 ,h3 , p {
+
+header p {
+    font-size: 0.9rem;
+}
+
+h2, h3, p {
     font-family: var(--fuente-texto);
     letter-spacing: 1px;
 }
@@ -39,31 +182,10 @@ strong {
     color: var(--color-acento);
 }
 
-em {
+span {
     color: var(--color-acento2);
 }
 
-header {
-    background-color: var(--fondo-superior);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.contenedor-links {
-    text-align: left;
-}
-
-main {
-    text-align: center;
-
-}
-
-footer {
-    background-color: var(--fondo-inferior);
-}
-
-.contenedor {
-    
-
+em {
+    color: var(--color-acento2);
 }

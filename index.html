@@ -6,119 +6,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/estilos.css">
     <title>Bully Canis Came</title>
 </head>
 
 <body>
+    <!-- portada / presentacion -->
     <header class="portada">
-        <div class="contenedor-links">
-            <ul>
-                <li><a href="index.html">inicio</a></li>
-                <li><a href="ciudad.html">ciudad</a></li>
-                <li><a href="lugares.html">lugares</a></li>
-                <li><a href="contacto.html">contacto</a></li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-md bg-1">
+            <div class="container-fluid px-0">
+                <!-- Logo bully -->
+                <img class="navbar-brand"
+                    src="https://media-rockstargames-com.akamaized.net/mfe-r19/prod/__common/img/b2e6fe18e15f1109b7d442881fccb9a6.svg"
+                    alt="Logo del juego">
 
-        <div class="contenedor-titulo">
-            <h1>Bully</h1>
-            <h2>Visita la academia Bullworth</h2>
-            <p>El lugar donde los jovenes se forman profecionalmente</p>
-            <a href="#Materias" class="materias-dictadas">Materias dictadas</a>
-        </div>
+                <!-- Contenedor para botón de tema + botón hamburguesa -->
+                <div class="d-flex align-items-center gap-2 order-md-last ms-md-2">
+                    <!-- Botón Modo Oscuro / Claro -->
+                    <button id="theme-toggle"
+                        class="btn btn-outline-light d-flex align-items-center justify-content-center" type="button"
+                        aria-label="Cambiar tema" style="width: 40px; height: 38px;">
+                        🌙
+                    </button>
+
+                    <!-- boton hamburguesa -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- menu de colapso -->
+                <div class="collapse navbar-collapse" id="navbarDrawer">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudad.html">ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">contacto</a>
+                        </li>
+                    </ul>
+                    <!-- barra de buscador de bootstrap -->
+                    <form class="d-flex gap-2 align-items-center" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-secondary d-flex align-items-center justify-content-center" type="submit"
+                            style="width: 38px; height: 38px; padding: 0; min-width: unset;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
-    <hr>
+
     <main>
-        <section>
-            <h2>Bienvenido a la Academia</h2>
-            <p>ubicada en la region de Nueva Inglaterra, Estados Unidos. <strong>Bullworth</strong> esta conformada por
-                sesenta estudiantes y un personal academico de dieciseis personas.
-                Dirigida por el Dr. Crabblesnitch</p>
-            <img src="https://static.wikia.nocookie.net/bullygame/images/e/ec/BullworthAcademy-FrontView.png/revision/latest/scale-to-width-down/1000?cb=20251219205703"
-                width="600" alt="Campo universitario">
+        <section class="card-container">
+            <section class="card" style="max-width: 700px">
+                <img src="https://static.wikia.nocookie.net/bullygame/images/e/ec/BullworthAcademy-FrontView.png/revision/latest/scale-to-width-down/1000?cb=20251219205703"
+                    class="card-img-top" alt="Campo universitario">
+                <div class="card-body">
+                    <h1 class="card-title">Bienvenido a la Academia</h1>
+                    <p class="card-text">Ubicada en la region de Nueva Inglaterra, Estados Unidos. <br>
+                        <strong>Bullworth</strong> esta conformada por lo mas alto
+                        de la <span>Elite</span> y dirigida por el Dr. Crabblesnitch
+                    </p>
+                    <a href="#Materias" class="btn-card">Materias dictadas</a>
+                </div>
+            </section>
         </section>
+
+
+        <div class="container-fluid seccion-fondo text-center">
+            <div class="row m-4 p-5 g-3">
+                <H1>Lo Mejor de Bullworth</H1>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://static.wikia.nocookie.net/bullyfanon/images/e/ec/Gym_Day.png/revision/latest/scale-to-width-down/1200?cb=20180824234041"
+                            class="card-img-top" alt="Gimnasio">
+                        <div class="card-body">
+                            <h2 class="card-title border-bottom">Deportes</h2>
+                            <p class="card-text">Contamos con diferentes actividades y espacios recreativos como el
+                                <strong>Gimnasio</strong> y la <strong>cancha de futbol americano</strong>. Cumpliendo
+                                las exigencias de los estudiantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://images.steamusercontent.com/ugc/10239049905991464583/F0947D9A5C27DA90E38004032E3B9BFE052DEB6B/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+                            class="card-img-top" alt="Estudiantes">
+                        <div class="card-body">
+                            <h2 class="card-title border-bottom">Buen ambiente</h5>
+
+                                <p class="card-text">Disfruta de la experiencia de hacer nuevos <em>amigos</em>, o
+                                    relajate con los tuyos</p>
+                                <a href="https://store.rockstargames.com/es/game/buy-bully-scholarship-edition?drm=Rockstar+Games+Launcher&_gl=1*s6hgg0*_gcl_au*MTU0NDMyMTYzNy4xNzk0MjU0Mjc4*_ga*MjA5NTU2MTIwNi4xNzkzMDY0MTMw*_ga_PJQ2JYZDQC*czE3OTQ2NzUzODckbzI5JGcxJHQxNzk0Njc1Mzg5JGo1OCRsMCRoMA.."
+                                    class="btn-solid theme-primary">Inscribite</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="https://static.wikia.nocookie.net/bully-ptbr/images/8/8c/Biblioteca-BullySE-interior.png/revision/latest/scale-to-width-down/250?cb=20250529113030&path-prefix=pt-br"
+                            class="card-img-top" alt="Biblioteca">
+                        <div class="card-body">
+                            <h2 class="card-title border-bottom"> Espacio cultural</h2>
+                            <p class="card-text">Explota el potencial de tu conocimiento, lee unos libros y sientete mas
+                                apto
+                                intelectualmente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <br>
-        <section>
-            <h2>Lo Mejor de Bullworth</h2>
+        <hr class="border-secondary opacity-50">
+        <!-- Cursos disponibles -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 p-4 p-md-5">
+                        <div class="card-body">
+                            <h2 id="Materias" class="card-title text-center mb-3">Cursos disponibles</h2>
+                            <p class="text-center text-muted mb-4">Anotate en increíbles materias:</p>
 
-            <h3>Diferentes actividades academicas</h3>
-            <p>Contamos con espacios interactivos para todo tipo de actividades como el <strong>Gimnasio</strong> y la
-                <strong>cancha de futbol americano</strong>. Cumpliendo las exigencias de los estudiantes.
-            </p>
-
-            <img src=https://static.wikia.nocookie.net/bullyfanon/images/e/ec/Gym_Day.png/revision/latest/scale-to-width-down/1200?cb=20180824234041"
-                width="600" alt="Gimnasio">
-
-            <h3>Buen ambiente estudiantil</h3>
-            <p>Disfruta de la experiencia de hacer nuevos <em>amigos</em>, o relajate con los tuyos</p>
-
-            <img src="https://images.steamusercontent.com/ugc/10239049905991464583/F0947D9A5C27DA90E38004032E3B9BFE052DEB6B/?imw=1024&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
-                width="600" alt="estudiante haciendo bulling">
-
-            <h3>Ambiente sociocultural, educativo y de aprendizaje</h3>
-            <p>Explota el potencial de tu conocimiento, lee unos libros y sientete mas apto intelectualmente.</p>
-
-            <img src="https://static.wikia.nocookie.net/bully-ptbr/images/8/8c/Biblioteca-BullySE-interior.png/revision/latest/scale-to-width-down/250?cb=20250529113030&path-prefix=pt-br"
-                width="600" alt="Biblioteca">
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li
+                                    class="list-group-item bg-transparent text-body d-flex align-items-start py-3 border-secondary">
+                                    <span class="badge bg-primary rounded-pill me-3 mt-1 fs-6">1</span>
+                                    <div>
+                                        <strong>Química:</strong> Aprende las bases fundamentales de la química y
+                                        experimenta.
+                                    </div>
+                                </li>
+                                <li
+                                    class="list-group-item bg-transparent text-body d-flex align-items-start py-3 border-secondary">
+                                    <span class="badge bg-primary rounded-pill me-3 mt-1 fs-6">2</span>
+                                    <div>
+                                        <strong>Inglés:</strong> Mejora tu fluidez con clases intensas de inglés.
+                                    </div>
+                                </li>
+                                <li
+                                    class="list-group-item bg-transparent text-body d-flex align-items-start py-3 border-secondary">
+                                    <span class="badge bg-primary rounded-pill me-3 mt-1 fs-6">3</span>
+                                    <div>
+                                        <strong>Gimnasia:</strong> Supera tus expectativas físicas entrenando duro.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <br>
-        <hr>
-        <section>
-            <h2 id="Materias">Cursos disponibles</h2>
-            <p>Anotate en increibles materias:</p>
-            <ol>
-                <li><strong>Quimica:</strong> Aprende las bases fundamentales de la quimica y experimenta.</li>
-                <li><strong>Ingles</strong> Mejora tu fluidez con clases intensas de ingles.</li>
-                <li><strong>Gimnasia</strong> Supera tus expectativas fisicas entrenando duro.</li>
-            </ol>
-        </section>
-        <br>
-        <hr>
-        <section>
-            <h2>Inscripciones:</h2>
-            <p>Para consultar el cupo disponible de inscripciones, ingresa al portal
-                de <a href=https://www.rockstargames.com/es/bully" target="_blank"
-                    rel="noopener noreferrer">Inscripciones BullworthAcademy</a>.</p>
+
+        <!-- Inscripciones -->
+        <section class="container mb-4 text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="p-4 rounded-4 border border-secondary bg-opacity-10 bg-secondary">
+                        <h2 class="h4 mb-2 border-bottom pb-2">Inscripciones</h2>
+                        <p class="mb-3">Para consultar el cupo disponible de inscripciones, ingresa al portal oficial.
+                        </p>
+                        <a href="https://www.rockstargames.com/es/bully" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline-light px-4 py-2 rounded-pill">
+                            Inscripciones Bullworth Academy
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <hr>
+    <hr class="border-secondary opacity-50 my-0">
 
-    <footer>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-between align-items-center">
+                <!-- Columna Izquierda: nombre y Enlaces -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h3 class="h3 mb-3">Bully <span>Bullworth Academy</span></h3>
+                    <p class="footer-links d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mb-3">
+                        <a href="index.html" class="link-1 text-decoration-none">Inicio</a>
+                        <a href="ciudad.html" class="text-decoration-none">Ciudad</a>
+                        <a href="lugares.html" class="text-decoration-none">Lugares</a>
+                        <a href="contacto.html" class="text-decoration-none">Contacto</a>
+                    </p>
+                    <p class="footer-iz-copyright text-muted small mb-0">Bullworth Academy &copy; 2026</p>
+                </div>
 
-        <div class="contenedor">
-            <h3>Bully <span>BullworthAcademy</span></h3>
-
-            <p class="footer-links">
-                <a href="index.html" class="link-1">Inicio</a>
-                <a href="ciudad.html">Ciudad</a>
-                <a href="lugares.html">Lugares</a>
-                <a href="contacto.html">Contacto</a>
-            </p>
-
-            <p class="footer-iz-copyright">BullworthAcademy &copy; 2026</p>
-        </div>
-
-
-        <div class="contenedor">
-            <div>
-                <p><span>Distrito universitario</span> Nueva Inglaterra, EE.UU</p>
-            </div>
-
-            <div>
-                <p>Llamar: <a href="tel:+541166666666">+54 11 6666-6666</a></p>
-            </div>
-
-            <div>
-                <p>Correo: <a href="mailto:info@BullyRockstar.BR">info@BullyRockstar.BR</a></p>
+                <!-- Columna Derecha: Información de contacto -->
+                <div class="col-md-5 text-center text-md-end">
+                    <div class="d-flex flex-column gap-2">
+                        <p class="mb-1"><span>Distrito universitario:</span> Nueva Inglaterra, EE.UU</p>
+                        <p class="mb-1">Llamar: <a href="tel:+541166666666" class="text-decoration-none"> +54 11
+                                6666-6666</a></p>
+                        <p class="mb-0">Correo: <a href="mailto:info@BullyRockstar.BR"
+                                class="text-decoration-none">info@BullyRockstar.BR</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
