@@ -6,173 +6,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/estilos.css">
     <title>Bullworth | Ciudad</title>
-
 </head>
 
 <body>
-
+    <!-- portada / presentacion -->
     <header class="portada">
-        <div class="top-bar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">inicio</a></li>
-                    <li><a href="ciudad.html">ciudad</a></li>
-                    <li><a href="lugares.html">lugares de interés</a></li>
-                    <li><a href="contacto.html">contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-md bg-1">
+            <div class="container-fluid px-0">
+                <!-- Logo bully -->
+                <img class="navbar-brand"
+                    src="https://media-rockstargames-com.akamaized.net/mfe-r19/prod/__common/img/b2e6fe18e15f1109b7d442881fccb9a6.svg"
+                    alt="Logo del juego">
 
-        <div class="contenido">
-            <h1>Bullworth</h1>
-            <h2>Bienvenido a la Ciudad de Bullworth</h2>
-            <p>Un pintoresco pueblo de Nueva Inglaterra, famoso por su prestigiosa academia.</p>
-        </div>
+                <!-- Contenedor para botón de tema + botón hamburguesa -->
+                <div class="d-flex align-items-center gap-2 order-md-last ms-md-2">
+                    <!-- Botón Modo Oscuro / Claro -->
+                    <button id="theme-toggle"
+                        class="btn btn-outline-light d-flex align-items-center justify-content-center" type="button"
+                        aria-label="Cambiar tema">
+                        🌙
+                    </button>
+
+                    <!-- boton hamburguesa -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- menu de colapso -->
+                <div class="collapse navbar-collapse" id="navbarDrawer">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ciudad.html">ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">contacto</a>
+                        </li>
+                    </ul>
+                    <!-- barra de buscador de bootstrap -->
+                    <form class="d-flex gap-2 align-items-center" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-secondary d-flex align-items-center justify-content-center" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
-    <hr>
-
 
     <main>
-
-        <section>
-            <h2>Historia de Bullworth</h2>
-
-            <p>
-                <strong>Bullworth</strong> es una pintoresca ciudad situada en la región de Nueva Inglaterra.
-                Su crecimiento e identidad han estado históricamente vinculados a la famosa <strong>Academia
-                    Bullworth</strong>, una institución educativa privada fundada en el siglo XIX.
-            </p>
-
-            <p>
-                Con el transcurso de los años, el pueblo se expandió desde un pequeño asentamiento industrial hasta
-                convertirse en una comunidad diversa con zonas residenciales, un centro comercial activo y un parque de
-                atracciones costero.
-            </p>
-
-            <p>
-                Actualmente, Bullworth es conocida por el constante contraste entre la vida idílica de sus ciudadanos y
-                las frecuentes disputas territoriales entre los estudiantes y las distintas subculturas urbanas.
-            </p>
-
-            <img src="https://static.wikia.nocookie.net/caniscanem/images/2/2c/Bullworth_Town.png/revision/latest/scale-to-width-down/1200?cb=20220210031712&path-prefix=es"
-                width="600" alt="Vista panorámica de la ciudad de Bullworth">
+        <!-- Presentación de la Ciudad -->
+        <section class="card-container">
+            <div class="card card-portada-ciudad">
+                <div class="card-body text-center">
+                    <h1 class="card-title">Ciudad de Bullworth</h1>
+                    <p class="card-text">
+                        Un pintoresco pueblo de Nueva Inglaterra, famoso por su prestigiosa academia y su particular vida urbana.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Identidad de la ciudad</h2>
-
-            <p>
-                Bullworth destaca por su estilo <em>clásico y tradicional</em>. Sus calles combinan la arquitectura
-                colonial de ladrillo rojo con el dinamismo de una comunidad universitaria y juvenil.
-            </p>
-
-            <p>
-                El ritmo de la ciudad está marcado por el horario escolar. Durante el día, las calles principales se
-                llenan de estudiantes, repartidores de periódicos y policías locales encargados de mantener el orden y
-                combatir el absentismo escolar.
-            </p>
+        <!-- Historia de Bullworth -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg border-0 p-4 p-md-5">
+                        <div class="card-body">
+                            <h2 class="card-title border-bottom pb-2 mb-3">Historia de Bullworth</h2>
+                            <p class="card-text">
+                                <strong>Bullworth</strong> es una pintoresca ciudad situada en la región de Nueva Inglaterra.
+                                Su crecimiento e identidad han estado históricamente vinculados a la famosa <strong>Academia
+                                Bullworth</strong>, una institución educativa privada fundada en el siglo XIX.
+                            </p>
+                            <p class="card-text">
+                                Con el transcurso de los años, el pueblo se expandió desde un pequeño asentamiento industrial hasta
+                                convertirse en una comunidad diversa con zonas residenciales, un centro comercial activo y un parque de
+                                atracciones costero.
+                            </p>
+                            <p class="card-text">
+                                Actualmente, Bullworth es conocida por el constante contraste entre la vida idílica de sus ciudadanos y
+                                las frecuentes disputas territoriales entre los estudiantes y las distintas subculturas urbanas.
+                            </p>
+                            <div class="mt-4">
+                                <img src="./imagenes/img-ciudad/Bullworth-ciudad.webp"
+                                    class="img-fluid rounded-4 shadow" alt="Vista panorámica de la ciudad de Bullworth">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Zonas y Distritos de Bullworth</h2>
-
-            <p>
-                La ciudad de Bullworth está dividida en varios distritos clave, cada uno habitado por diferentes grupos
-                sociales y tribus urbanas:
-            </p>
-
-            <ul>
-                <li>
-                    <strong>Academia Bullworth:</strong> El corazón educativo del pueblo, sede de clases, residencias y
-                    el campo de deportes.
-                </li>
-
-                <li>
-                    <strong>Bullworth Town (Centro):</strong> El centro comercial de la ciudad, lleno de tiendas de
-                    ropa, barberías, el cine local y el ayuntamiento.
-                </li>
-
-                <li>
-                    <strong>Old Bullworth Vale:</strong> El distrito adinerado de la ciudad, repleto de mansiones,
-                    jardines bien cuidados y habitado por los "Pijos" (Preppies).
-                </li>
-
-                <li>
-                    <strong>New Coventry:</strong> La zona industrial y urbana en decadencia, dominada por callejones
-                    oscuros y el territorio principal de los "Macarras" (Greasers).
-                </li>
-
-                <li>
-                    <strong>Blue Skies Industrial Park:</strong> El sector de fábricas y almacenes abandonados en las
-                    afueras, hogar de la planta de gas y refugio de los "Macarras" (Townies).
-                </li>
-
-                <li>
-                    <strong>Carnival (Parque de Atracciones):</strong> Situado cerca de la costa, cuenta con montañas
-                    rusas, juegos de feria, carpas de espectáculos y la tienda de recuerdos.
-                </li>
-            </ul>
+        <!-- Identidad de la ciudad -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="p-4 rounded-4 border border-secondary bg-opacity-10 bg-secondary">
+                        <h2 class="h4 mb-3 border-bottom pb-2">Identidad de la ciudad</h2>
+                        <p class="card-text mb-3">
+                            Bullworth destaca por su estilo <em>clásico y tradicional</em>. Sus calles combinan la arquitectura
+                            colonial de ladrillo rojo con el dinamismo de una comunidad universitaria y juvenil.
+                        </p>
+                        <p class="card-text mb-0">
+                            El ritmo de la ciudad está marcado por el horario escolar. Durante el día, las calles principales se
+                            llenan de estudiantes, repartidores de periódicos y policías locales encargados de mantener el orden y
+                            combatir el absentismo escolar.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Cultura y ambiente local</h2>
+    <hr class="border-secondary opacity-50 my-0">
 
-            <p>
-                Bullworth ofrece una gran variedad de actividades para sus residentes y visitantes. Desde pasear en
-                bicicleta por sus calles arboladas hasta pasar la tarde en la feria local probando juegos de puntería.
-            </p>
+        <!-- Zonas y Distritos (Con cards limpias en lugar de lista común) -->
+        <div class="container-fluid seccion-fondo text-center py-5">
+            <h2 class="borde-fondo-negro mb-4">Zonas y Distritos de Bullworth</h2>
+            
+            <div class="row m-2 g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">Academia Bullworth</h3>
+                            <p class="card-text">El corazón educativo del pueblo, sede de clases, residencias y el campo de deportes.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <p>
-                La estética de la ciudad cambia drásticamente según la estación del año. El otoño viste las calles de
-                hojas secas, mientras que durante el invierno la ciudad se cubre completamente de nieve, cambiando las
-                dinámicas de la comunidad.
-            </p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">Bullworth Town</h3>
+                            <p class="card-text">El centro comercial de la ciudad, lleno de tiendas de ropa, barberías, el cine y el ayuntamiento.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <p>
-                La vida nocturna es tranquila pero vigilada, ya que la policía municipal y los prefectos de la academia
-                aplican de forma estricta el toque de queda nocturno.
-            </p>
-        </section>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">Old Bullworth Vale</h3>
+                            <p class="card-text">El distrito adinerado, repleto de mansiones, jardines cuidados y habitado por los "Pijos".</p>
+                        </div>
+                    </div>
+                </div>
 
-    </main>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">New Coventry</h3>
+                            <p class="card-text">Zona industrial y urbana en decadencia, dominada por callejones y territorio de los "Macarras".</p>
+                        </div>
+                    </div>
+                </div>
 
-    <hr>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">Blue Skies Industrial Park</h3>
+                            <p class="card-text">Sector de fábricas abandonadas en las afueras, hogar de la planta de gas y refugio de los Townies.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <footer class="footer-distribucion">
-
-        <div class="footer-iz">
-            <h3>Bully <span>BullworthAcademy</span></h3>
-
-            <p class="footer-links">
-                <a href="index.html" class="link-1">Inicio</a>
-                <a href="ciudad.html">Ciudad</a>
-                <a href="lugares.html">Lugares</a>
-                <a href="contacto.html">Contacto</a>
-            </p>
-
-            <p class="footer-iz-copyright">BullworthAcademy &copy; 2026</p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 border-bottom pb-2">Carnival</h3>
+                            <p class="card-text">Situado cerca de la costa, cuenta con montañas rusas, juegos de feria y carpas de espectáculos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-der">
-            <div>
-                <p><span>Distrito universitario</span> Nueva Inglaterra, EE.UU</p>
+        <!-- Cultura y ambiente local -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 p-4 p-md-5">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3">Cultura y ambiente local</h2>
+                            <p class="card-text mb-3">
+                                Bullworth ofrece una gran variedad de actividades para sus residentes y visitantes. Desde pasear en
+                                bicicleta por sus calles arboladas hasta pasar la tarde en la feria local probando juegos de puntería.
+                            </p>
+                            <p class="card-text mb-3">
+                                La estética de la ciudad cambia drásticamente según la estación del año. El otoño viste las calles de
+                                hojas secas, mientras que durante el invierno la ciudad se cubre completamente de nieve.
+                            </p>
+                            <p class="card-text mb-0">
+                                La vida nocturna es tranquila pero vigilada, ya que la policía municipal y los prefectos aplican de
+                                forma estricta el toque de queda nocturno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div>
-                <p>Llamar: <a href="tel:+541166666666">+54 11 6666-6666</a></p>
-            </div>
+    <hr class="border-secondary opacity-50 my-0">
 
-            <div>
-                <p>Correo: <a href="mailto:info@BullyRockstar.BR">info@BullyRockstar.BR</a></p>
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-between align-items-center">
+                <!-- Columna Izquierda: nombre y Enlaces -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h3 class="h3 mb-3">Bully <span>Bullworth Academy</span></h3>
+                    <p class="footer-links d-flex flex-wrap justify-content-center justify-content-md-start gap-3 mb-3">
+                        <a href="index.html" class="link-1 text-decoration-none">Inicio</a>
+                        <a href="ciudad.html" class="text-decoration-none">Ciudad</a>
+                        <a href="lugares.html" class="text-decoration-none">Lugares</a>
+                        <a href="contacto.html" class="text-decoration-none">Contacto</a>
+                    </p>
+                    <p class="footer-iz-copyright text-muted small mb-0">Bullworth Academy &copy; 2026</p>
+                </div>
+
+                <!-- Columna Derecha: Información de contacto -->
+                <div class="col-md-5 text-center text-md-end">
+                    <div class="d-flex flex-column gap-2">
+                        <p class="mb-1"><span>Distrito universitario:</span> Nueva Inglaterra, EE.UU</p>
+                        <p class="mb-1">Llamar: <a href="tel:+541166666666" class="text-decoration-none"> +54 11
+                                6666-6666</a></p>
+                        <p class="mb-0">Correo: <a href="mailto:info@BullyRockstar.BR"
+                                class="text-decoration-none">info@BullyRockstar.BR</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

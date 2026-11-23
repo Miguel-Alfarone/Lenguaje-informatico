@@ -1,8 +1,5 @@
-/* ==========================================
-   1. VARIABLES Y CONFIGURACIÓN DE TEMA
-   ================================---------- */
+/* variables y colores por defecto de mi modo oscuro ya que la pagina la hice con tonalidad oscura*/
 :root {
-    /* variables y colores por defecto de mi modo oscuro ya que la pagina la hice con tonalidad oscura*/
     --color-letras: #ffffff;
     --color-acento: #466c9eaa;
     --color-acento2: #1dbdbdec;
@@ -16,19 +13,18 @@
     --hover-color: #222222;
 }
 
-/* variables del modo claro*/
+/* variables del modo claro - Estilo pergamino / escolar */
 body.light-mode {
-    --color-letras: #1a1a1a;
-    --color-acento: #2c4a6eee;
-    --color-acento2: #0e7490;
-    --color-botones: #524ebfcc;
-    --fondo-superior: #f0f2f5;
-    --fondo-completo: #f8fafc;
-    --fondo-inferior: #ffffff;
-    --card-bg: #ffffff;
-    --hover-color: #e2e8f0;
+    --color-letras: #1f1d1a;       /* Carbón cálido (más suave que negro puro) */
+    --color-acento: #3b5b7c;       /* Azul pizarra */
+    --color-acento2: #0f766e;      /* Verde azulado apagado */
+    --color-botones: #6d597a;      /* Malva / púrpura suave */
+    --fondo-superior: #e6dfd1;     /* Arena / pergamino suave */
+    --fondo-completo: #f2ede2;     /* Crema / hoja de cuaderno */
+    --fondo-inferior: #e2dac9;     /* Tono arena un poco más marcado */
+    --card-bg: #faf7f0;            /* Marfil claro (no blanco puro) */
+    --hover-color: #dcd3c1;        /* Hover en tono arena */
 }
-
 /* RESET Y CONFIGURACIÓN BASE */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -131,6 +127,7 @@ header {
 .card-body {
     color: var(--color-letras);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: start;
     gap: 5px;
@@ -178,6 +175,10 @@ h2, h3, p {
     letter-spacing: 1px;
 }
 
+.borde-fondo-negro mb-4 {
+    border: solid;
+}
+
 strong {
     color: var(--color-acento);
 }
@@ -188,4 +189,12 @@ span {
 
 em {
     color: var(--color-acento2);
+}
+
+/* posicion header para scroll */
+
+header.portada {
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
