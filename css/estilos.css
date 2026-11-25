@@ -26,7 +26,7 @@ body.light-mode {
     --hover-color: #dcd3c1;        /* Hover en tono arena */
 }
 /* RESET Y CONFIGURACIÓN BASE */
-*, *::before, *::after {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
